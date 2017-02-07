@@ -30,7 +30,7 @@ phantom.create(['--debug=true'],{ logLevel: 'debug' }) //--remote-debugger-port=
         if(files.length >= parameters.count){
             //all shots done
             page.close();
-            phInstance.exit(0);
+            return phInstance.exit(0);
         }
 
         var file = __dirname + '/slide-'+ parameters.index + '.png';
